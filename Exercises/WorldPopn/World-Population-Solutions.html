@@ -253,7 +253,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">data.table: World Population Exercise</h1>
 <h4 class="author"><em>Saghir Bashir</em></h4>
-<h4 class="date"><em>Sun 02 Dec 2018 (20:43:59)</em></h4>
+<h4 class="date"><em>Tue 04 Dec 2018 (17:56:10)</em></h4>
 
 </div>
 
@@ -521,8 +521,7 @@ cy</code></pre></div>
 <li>Order <code>PropF</code> from the lowest to the highest and select the first 10 observations for both 1950 and 2015.</li>
 <li>Order <code>PropF</code> from the highest to lowest and select the first 10 observations for both 1950 and 2015.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp &lt;-<span class="st"> </span>cy[, PropF <span class="op">:</span><span class="er">=</span><span class="st"> </span>TotF<span class="op">/</span>Total][
-  , PropM <span class="op">:</span><span class="er">=</span><span class="st"> </span>TotM<span class="op">/</span>Total][
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp &lt;-<span class="st"> </span>cy[, <span class="st">`</span><span class="dt">:=</span><span class="st">`</span>(<span class="dt">PropF=</span>TotF<span class="op">/</span>Total, <span class="dt">PropM=</span>TotM<span class="op">/</span>Total)][
   , .(Country, Year, PropF)]
 
 pp[<span class="kw">order</span>(Year, PropF)][Year<span class="op">==</span><span class="dv">1950</span>][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</code></pre></div>

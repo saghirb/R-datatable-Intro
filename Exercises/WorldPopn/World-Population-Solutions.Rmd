@@ -182,8 +182,7 @@ for both 1950 and 2015.
 
 
 ```{r proportion}
-pp <- cy[, PropF := TotF/Total][
-  , PropM := TotM/Total][
+pp <- cy[, `:=`(PropF=TotF/Total, PropM=TotM/Total)][
   , .(Country, Year, PropF)]
 
 pp[order(Year, PropF)][Year==1950][1:10]
