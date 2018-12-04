@@ -585,38 +585,46 @@ cw
 # Drop Columns
 
 .pull-left[
-### Drop One Column
- 
 ```{r dropCol, highlight.output=c(1)}
+# Drop One Column #<<
 cw[, weightKg:=NULL]
 cw
 ```
  ]
 --
 .pull-right[
-### Drop Multiple Columns
-
-```{r dropCols, echo=TRUE, eval=TRUE}
+```{r dropCols, highlight.output=c(1)}
+# Drop Multiple Columns #<<
 cw[, c("Diet", "Hours"):=NULL]
 cw
 ```
-
-<br>
+  ]
   
 ### Dropping columns changes `cw`
-  ]
+
 ---
 
 <div class="rdatatable-logo-right-top"></div>
 
 # `setnames()`: Renaming Columns
 
-### Rename: `weight` to `Weight` & `LongD` to `Group`
-
-```{r renamevar, highlight.output=c(1)}
-setnames(cw, c("weight", "LongD"), c("Weight", "Group"))
+.pull-left[
+```{r renameOrig, highlight.output=c(1)}
+# Current cw
 cw
 ```
+]
+--
+.pull-right[
+```{r renameVars, highlight.output=c(1)}
+# Rename: weight to Weight & LongD to Group
+setnames(cw, c("weight", "LongD"), 
+             c("Weight", "Group"))
+cw
+```
+]
+
+### `setnames()` changes `cw` `r emoji('smiley')`
 
 ---
 
@@ -651,7 +659,7 @@ setcolorder(cw, c("Group", "Chick", "Time", "Weight"))
 cw
 ```
 
-## `cw` changed `r emoji('smiley')`
+## `setcolorder()` changes `cw` `r emoji('smiley')`
 
 
 ---
