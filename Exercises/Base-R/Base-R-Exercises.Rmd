@@ -1,0 +1,292 @@
+---
+title: "Exercise Sheet: Base R Concepts"
+
+# Use letters for affiliations
+author:
+  - name: Saghir Bashir
+#     affiliation: a
+# address:
+#   - code: a
+#     address: ilustat \url{www.ilustat.com}
+
+# For footer text  TODO(fold into template, allow free form two-authors)
+# I will use it to place the copyright notice (Creative Comments Share Alike)
+lead_author_surname: "[CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/) [ilustat](http://ilustat.com/) $\\bullet$ [info@ilustat.com](mailto:info@ilustat.com)"
+
+# Place DOI URL or CRAN Package URL here
+doi: "Learn more at http://ilustat.com/resources/"
+
+# Abstract
+abstract: |
+   This exercise sheet is designed to help you understand the key concepts that 
+   are essential to learning and using R. The key requirement is to have R
+   installed. Follow the instructions below to learn more. Have fun!
+  
+# Optional: Acknowledgements
+acknowledgements: |
+  The R project (https://www.r-project.org) for a great product.
+  
+# Optional: One or more keywords
+# keywords:
+#   - R
+#   - Base R
+#   - Statistics
+#   - Data Science
+
+# Paper size for document, values of letterpaper and a4paper
+papersize: a4
+
+# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
+fontsize: 9pt
+
+# Optional: Force one-column layout, default is two-column
+#one_column: true
+
+# Optional: Enables lineno mode, but only if one_column mode is also true
+#lineno: true
+
+# Optional: Enable one-sided layout, default is two-sided
+# one_sided: true
+
+# Optional: Enable section numbering, default is unnumbered
+numbersections: true
+
+# Optional: Specify the depth of section number, default is 5
+secnumdepth: 3
+
+# Optional: Skip inserting final break between acknowledgements, default is false
+skip_final_break: true
+
+# Optional: Bibliography 
+# bibliography: pinp
+
+# Optional: Enable a 'Draft' watermark on the document
+watermark: FALSE
+
+# Customize footer, eg by referencing the vignette
+footer_contents: "Exercise Sheet: Base R Concepts"
+
+# Produce a pinp document
+output: 
+  pinp::pinp:
+    fig_caption: yes
+    collapse: true
+    keep_tex: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+options(width=45)
+```
+
+## Be Brave and Experiment 
+
+Making mistakes and experimenting is an essential part of learning R.
+You can recover from most mistakes (e.g. by restarting R). To do this 
+"safely" start with a *fresh* R session without any other data loaded 
+(otherwise you could lose it). 
+
+## Start R
+
+Double click in the R (or RStudio) icon to start it.
+
+## Warning
+
+If an R command is not complete then R will show a plus sign (`+`) prompt
+on second and subsequent lines until the command syntax is correct.
+```{r continuation, echo=TRUE, eval=FALSE}
++
+```
+To break out this, press the escape key (`ESC`).
+
+## Exercises: The following are exercises for you try with R.
+
+# Assign Values to an Object
+
+## Assign numbers to objects:
+```{r numObjects ec}
+year <- 1995
+cases <- 523
+year
+cases
+```
+
+## Assign characters to objects:
+```{r charObjects ec}
+country <- "Portugal"
+country
+```
+
+## Warning: R is case sensitive
+
+```{r caseSens1}
+city <- "Coimbra"
+CITY <- "Porto"
+city
+CITY
+```
+
+
+# R as a Calculator
+
+## You can use R as a basic calculator
+```{r calcBasic}
+72 + (34*51 - 4982)/(18*45) 
+sqrt(81)
+9**2
+```
+
+## Trigonometric and logarithmic functions
+```{r calcTrig}
+# pi is a stored value
+pi
+sin(pi/3)
+tan(pi/3)
+log10(1000)
+log(5.2)
+exp(1)
+```
+
+## Rounding & combining
+```{r calcFn}
+signif(1512337, 2)
+round(16.15643, 2)
+round(exp(sqrt(log(514))), 2)
+```
+
+# Some More R Concepts
+
+You can do some clever and useful things with using the assignment operator  `<-`: 
+```{r assignBasic}
+price <- 412.65
+tax <- 94.91
+total <- price + tax
+total
+```
+
+## Vectors
+
+The objects presented so far have all been scalars (single values). Working with
+vectors is where R shines best as they are the basic building blocks of datasets. To create a vector we can use the `c()` (combine values into a vector) function.
+```{r cVector}
+vYear <- c(1995, 2000, 2005, 2010, 2015)
+vCases <- c(523, 489, 511, 472, 439)
+vCountry <- rep("Portugal", 5)
+vYear
+vCases
+vCountry
+```
+
+## Vector operations
+
+```{r operationsVecs}
+# Calculate the total by adding the tax to net
+net <- c(108.99, 291.42, 16.28, 62.29, 31.77)
+tax <- c(22.89, 17.49, 0.98, 13.08, 6.67)
+total <- net + tax
+total
+# Convert from degrees centrigrade to fahrenheit
+tempC <- seq(-40, 40, 10)
+tempF <- (9*tempC)/5 + 32
+tempC
+tempF
+```
+
+## Missing Values
+
+Missing values are coded as `NA` in R. 
+```{r MissingValues}
+height <- c(NA, 1.73, 1.53, 1.67, 1.66, 1.81) 
+weight <- c(63, 70, 95, 63, NA, 77)
+bmi <- weight/(height**2)
+height
+weight
+round(bmi, 1)
+```
+
+## Comments
+
+It is useful to put human readable comments in your programs. These comments could 
+help the future you when you go back to your program. R comments start with a hash 
+sign (`#`). Everything after the hash to the end of the line will be ignored by R.
+```{r comments}
+# This comment line will be ignored when run.
+weight # Weight in kg
+height # Height in metres
+# bmi - Body Mass Index
+signif(bmi, 3)
+```
+
+## Managing Objects
+
+Use function `ls()` to list the objects in your workspace. The `rm()` function removes
+(deletes) them.
+```{r lsrm}
+ls()
+rm(cases, city, CITY, country, year, tempF, tempC)
+ls()
+```
+
+## R Functions 
+
+What do the following functions do?
+```{r functionUsage}
+myNums <- c(454, 939, 740, 701, 394, 79, 30)
+sort(myNums)
+sort(myNums, decreasing = TRUE)
+rank(myNums)
+rev(myNums)
+```
+
+```{r sumstatFunctions}
+# With missing values
+naNums <- c(105, 81, 17, NA, 52, 394)
+mean(naNums)
+mean(naNums, na.rm = TRUE)
+sd(naNums, na.rm = TRUE)
+```
+
+## The useful `summary()` function
+```{r summaryFn}
+summary(naNums)
+```
+
+## Pasting text and numbers
+
+```{r funExamples}
+Names <- c("Leo", "Iris")
+Age <- c(4, 5)
+Text <- paste0(Names, " is ", Age, " years old,")
+Text
+toupper(Text)
+tolower(Text)
+```
+
+# Additional Materials
+
+## Selecting elements from a vector
+
+```{r selectElements}
+colour <- c("red", "blue", "pink", "cyan", "gray")
+colour[4]
+colour[3:5]
+colour[c(5, 1, 3)]
+```
+
+
+## Evaluating logical expressions
+
+```{r logicalexp}
+xscale <- c(7, 10, 9, 6, 1, 8, 2)
+xscale > 8
+xscale[xscale > 8 | xscale <=2]
+```
+
+# Summary
+
+With these exercises you now have the building blocks to learn more.
+
+

@@ -1,0 +1,84 @@
+.rlogo-logo-left-top {
+content: "";
+    position: absolute;
+    top: 50px;
+    left:   60px;
+    height: 100px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/Rlogo.png);
+}
+
+.rdatatable-logo-left-bottom {
+content: "";
+    position: absolute;
+    bottom: 50px;
+    left:   50px;
+    height: 160px;
+    width: 480px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/r-datatable-hex.png);
+}
+
+.rlogo-logo-right-top {
+content: "";
+    position: absolute;
+    top: 40px;
+    right:   0px;
+    height: 80px;
+    width: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/Rlogo.png);
+}
+
+.rdatatable-logo-right-top {
+content: "";
+    position: absolute;
+    top: 40px;
+    right:   0px;
+    height: 80px;
+    width: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/r-datatable-hex.png);
+}
+
+.ggplot2-hex-right-top {
+content: "";
+    position: absolute;
+    top: 40px;
+    right:   0px;
+    height: 80px;
+    width: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/hex-ggplot2.png);
+}
+
+.knitr-hex-right-top {
+content: "";
+    position: absolute;
+    top: 40px;
+    right:   0px;
+    height: 80px;
+    width: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/knitr.png);
+}
+
+.xaringan-hex-right-top {
+content: "";
+    position: absolute;
+    top: 40px;
+    right:   0px;
+    height: 80px;
+    width: 240px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(images/xaringan-hex.png);
+}
+
