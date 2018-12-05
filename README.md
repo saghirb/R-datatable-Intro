@@ -4,6 +4,8 @@
 
 An introduction to basic R concepts and the `data.table` package.
 
+![](GSIR-te-Workshop.png)
+
 # Why `data.table`?
 
 - `data.table` is a great, high quality and well maintained package with a strong
@@ -34,5 +36,10 @@ The materials presented in this repository are complementary to [Getting Started
   + Materials to distribute **after** the workshop 
     + Solutions to world population exercises (HTML)
     + Main presentation (HTML)
+
+# Acknowledgements
+
+Thanks to [Matt Dowle](https://github.com/mattdowle), [Arun Srinivasan](https://github.com/arunsrinivasan) and all the `data.table` [team]((https://github.com/orgs/Rdatatable/people)) and contributors for such a great package.
+
 
 
