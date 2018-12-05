@@ -1,6 +1,6 @@
 # Teaching materials: R Intro & `data.table`
 
-> Teaching materials for Getting Started in R - Tinyverse Edition
+> Teaching materials for "[Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf)"
 
 An introduction to basic R concepts and the `data.table` package.
 
@@ -39,7 +39,7 @@ The materials presented in this repository are complementary to [Getting Started
 
 # Acknowledgements
 
-Thanks to [Matt Dowle](https://github.com/mattdowle), [Arun Srinivasan](https://github.com/arunsrinivasan) and all the `data.table` [team]((https://github.com/orgs/Rdatatable/people)) and contributors for such a great package.
+Thanks to [Matt Dowle](https://github.com/mattdowle), [Arun Srinivasan](https://github.com/arunsrinivasan) and all the `data.table` [team](https://github.com/orgs/Rdatatable/people) and contributors for such a great package.
 
 
 
