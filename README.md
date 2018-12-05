@@ -1,8 +1,10 @@
-# Teaching materials for Getting Started in R - Tinyverse Edition
+# Teaching materials: R Intro & `data.table`
+
+> Teaching materials for Getting Started in R - Tinyverse Edition
 
 An introduction to basic R concepts and the `data.table` package.
 
-## Why `data.table`?
+# Why `data.table`?
 
 - `data.table` is a great, high quality and well maintained package with a strong
 development team.
