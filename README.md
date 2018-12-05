@@ -11,31 +11,34 @@ An introduction to basic R concepts and the `data.table` package.
 - `data.table` is a great, high quality and well maintained package with a strong
 development team.
 - It is **fast** and **memory efficient**. 
-  - Including reading and writing data.
+    + Including reading and writing data.
 - It has no dependencies and works out of the box :)
-- Knowing this package will increase your knowledge and understanding of R.
+- Knowing `data.table` will increase your knowledge and understanding of R.
+    + I think it is a must know or must have package in your R toolkit.
+    + Be brave give it a go :)
 
 For more information see [http://r-datatable.com](http://r-datatable.com)
 
 # Contents
 
-The materials presented in this repository are complementary to [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf)
+The materials presented in this repository are complementary to [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (co-authored with [Dirk
+Eddelbuettel](https://github.com/eddelbuettel/))
 
 - Presentation
-  + Main presentation for workshop
+    + Main presentation for workshop
 - Exercises 
-  + Base R concepts Exercise sheet
-  + World populations case study
+    + Base R concepts Exercise sheet
+    + World populations case study
 - Share-During
-  + Materials to distribute **during** the workshop (ZIP)
-    + Base R Exercises (PDF)
-    + [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (PDF)
-    + Chick weight data (CSV)
-    + World population exercises (Rmarkdown)
+    + Materials to distribute **during** the workshop (ZIP)
+        + Base R Exercises (PDF)
+        + [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (PDF)
+        + Chick weight data (CSV)
+        + World population exercises (Rmarkdown)
 - Share-After (ZIP)
-  + Materials to distribute **after** the workshop 
-    + Solutions to world population exercises (HTML)
-    + Main presentation (HTML)
+    + Materials to distribute **after** the workshop 
+        + Solutions to world population exercises (HTML)
+        + Main presentation (HTML)
 
 # Acknowledgements
 
