@@ -14,7 +14,7 @@ development team.
     + Including reading and writing data.
 - It has no dependencies and works out of the box :)
 - Knowing `data.table` will increase your knowledge and understanding of R.
-    + I think it is a must know or must have package in your R toolkit.
+    + I think it is a must have (or must know about) package in your R toolkit.
     + Be brave give it a go :)
 
 For more information see [http://r-datatable.com](http://r-datatable.com)
