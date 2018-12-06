@@ -1,4 +1,4 @@
-# Teaching materials: R Intro & `data.table`
+# Teaching materials: Intro to R & `data.table`
 
 > Teaching materials for "[Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf)"
 
@@ -14,7 +14,7 @@ development team.
     + Including reading and writing data.
 - It has no dependencies and works out of the box :)
 - Knowing `data.table` will increase your knowledge and understanding of R.
-    + I think it is a must have (or must know about) package in your R toolkit.
+    + I think it is a must have (or must know about) package in your R tool kit.
     + Be brave give it a go :)
 
 For more information see [http://r-datatable.com](http://r-datatable.com)
@@ -27,14 +27,15 @@ Eddelbuettel](https://github.com/eddelbuettel/))
 - Presentation
     + Main presentation for workshop
 - Exercises 
-    + Base R concepts Exercise sheet
-    + World populations case study
+    + Exercise sheet: Base R concepts 
+    + Case Study: United Nations (UN) World Population Data 
 - Share-During
     + Materials to distribute **during** the workshop (ZIP)
         + Base R Exercises (PDF)
         + [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (PDF)
         + Chick weight data (CSV)
-        + World population exercises (Rmarkdown)
+        + World population exercises (R Markdown)
+        + Subset of UN world population data (CSV)
 - Share-After (ZIP)
     + Materials to distribute **after** the workshop 
         + Solutions to world population exercises (HTML)
