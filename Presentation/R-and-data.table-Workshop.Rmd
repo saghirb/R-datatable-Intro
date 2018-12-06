@@ -22,9 +22,9 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-library(tidyverse)
 library(knitr)
 library(kableExtra)
+library(ggplot2)
 library(emojifont)
 
 # Making some aesthetic changes for this document
@@ -324,7 +324,6 @@ class: inverse, center, middle
 ```{r echo=FALSE, eval=TRUE}
 suppressMessages(library(data.table))
 CW <- as.data.table(ChickWeight)[
-    , Chick := as_factor(as.character(Chick))][
     , Diet := as.factor(Diet)][
     , .(Chick, Diet, Time, weight)][
       order(Chick, Diet, Time)]
