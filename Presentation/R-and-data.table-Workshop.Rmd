@@ -324,6 +324,7 @@ class: inverse, center, middle
 ```{r echo=FALSE, eval=TRUE}
 suppressMessages(library(data.table))
 CW <- as.data.table(ChickWeight)[
+    , Chick := as.numeric(as.character(Chick))][
     , Diet := as.factor(Diet)][
     , .(Chick, Diet, Time, weight)][
       order(Chick, Diet, Time)]
