@@ -1,7 +1,7 @@
 ---
 title: "Getting Started in R and data.table"
 author: "Saghir Bashir"
-date: "1st December 2018"
+date: "`r format(Sys.time(), '%a %d %b %Y (%H:%M:%S)')`"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
@@ -48,13 +48,15 @@ class: middle, center
 
 <br>
 
-### Saghir Bashir <br>ilustat<br>1 Dec 2018
+### Saghir Bashir <br>ilustat.com<br>19th Jan 2019
 
 
 ---
 class: inverse, middle, center
 
 # Relax
+
+# ExpeRiment
 
 # Make Mistakes
 
@@ -238,7 +240,7 @@ city
 ```{r comments}
 # This comment line is ignored by R #<<
 Year
-city  # The hash is that start of this comment #<<
+city  # This comment starts after the hash #<<
 ```
 
 ---
@@ -247,7 +249,7 @@ city  # The hash is that start of this comment #<<
 
 # Managing Objects
 
-### Use `ls()` to see (list) what objects you have
+### Use `ls()` to *list* the objects you have stored in R
 ```{r lsObjects}
 ls()
 
@@ -265,9 +267,9 @@ ls()
 
 # Functions
 
-### We have already seen some functions (e.g, `mean()`, `seq()`)
+### We have already seen some R functions (e.g, `mean()`, `seq()`)
 
-### Function has a name and list of arguments
+### A function has a name and list of arguments
 
 ```{r functions}
 # Name: seq; Arguments: from, to & by
@@ -298,7 +300,7 @@ class: inverse, center, middle
 ---
 class: inverse, center, middle
 
-# Practical: 30 Minutes
+# Practical: 50 minutes
 
 <br>
 
