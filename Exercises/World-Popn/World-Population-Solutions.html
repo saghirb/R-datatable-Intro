@@ -27,7 +27,7 @@
 
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
+<style type="text/css" data-origin="pandoc">
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
@@ -63,7 +63,29 @@ code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Doc
 code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
 code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
 </style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -126,6 +148,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -133,14 +158,74 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -253,7 +338,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">data.table: World Population Exercise</h1>
 <h4 class="author"><em>Saghir Bashir</em></h4>
-<h4 class="date"><em>Fri 30 Nov 2018 (18:50:27)</em></h4>
+<h4 class="date"><em>Wed 16 Jan 2019 (18:12:56)</em></h4>
 
 </div>
 
@@ -287,7 +372,31 @@ div.tocify {
 <div id="read-in-the-data" class="section level2">
 <h2>Read in the data</h2>
 <p>First the load the <code>data.table</code> package (hint: use the <code>library()</code> function). Then use the <code>fread()</code> function to read in the data file <code>World-Population.csv</code> in an object called <code>un</code>. Finally look at the <code>un</code> dataset using the <code>str()</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)
+un &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="st">&quot;World-Population.csv&quot;</span>)
+un</code></pre></div>
+<pre><code>##        continent    Location Time AgeGrp AgeGrpStart PopFemale PopMale
+##     1:      Asia Afghanistan 1950    0-4           0    661.58  630.04
+##     2:      Asia Afghanistan 1950    5-9           5    487.33  516.21
+##     3:      Asia Afghanistan 1950  10-14          10    423.33  461.38
+##     4:      Asia Afghanistan 1950  15-19          15    369.36  414.37
+##     5:      Asia Afghanistan 1950  20-24          20    318.39  374.11
+##    ---                                                                
+## 47942:    Africa      Zambia 2015  80-84          80     23.30   16.10
+## 47943:    Africa      Zambia 2015  85-89          85      9.17    5.84
+## 47944:    Africa      Zambia 2015  90-94          90      2.40    1.30
+## 47945:    Africa      Zambia 2015  95-99          95      0.35    0.16
+## 47946:    Africa      Zambia 2015   100+         100      0.03    0.01</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(un)</code></pre></div>
+<pre><code>## Classes 'data.table' and 'data.frame':   47946 obs. of  7 variables:
+##  $ continent  : chr  &quot;Asia&quot; &quot;Asia&quot; &quot;Asia&quot; &quot;Asia&quot; ...
+##  $ Location   : chr  &quot;Afghanistan&quot; &quot;Afghanistan&quot; &quot;Afghanistan&quot; &quot;Afghanistan&quot; ...
+##  $ Time       : int  1950 1950 1950 1950 1950 1950 1950 1950 1950 1950 ...
+##  $ AgeGrp     : chr  &quot;0-4&quot; &quot;5-9&quot; &quot;10-14&quot; &quot;15-19&quot; ...
+##  $ AgeGrpStart: int  0 5 10 15 20 25 30 35 40 45 ...
+##  $ PopFemale  : num  662 487 423 369 318 ...
+##  $ PopMale    : num  630 516 461 414 374 ...
+##  - attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt;</code></pre>
 <div id="pre-processing-the-data" class="section level3">
 <h3>Pre-processing the Data</h3>
 <p>Start by preparing the data for analysis:</p>
@@ -300,7 +409,37 @@ div.tocify {
 <li>Order the data by continent, country, year and age group (hint: use the <code>setkey()</code> function)</li>
 <li>Look at the data (by typing <code>un</code> and using the <code>str()</code> function).</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setnames</span>(un, <span class="kw">c</span>(<span class="st">&quot;continent&quot;</span>, <span class="st">&quot;Location&quot;</span>, <span class="st">&quot;Time&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;Continent&quot;</span>, <span class="st">&quot;Country&quot;</span>, <span class="st">&quot;Year&quot;</span>))
+un[, PopF <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="dv">1000</span><span class="op">*</span>PopFemale]
+un[, PopM <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="dv">1000</span><span class="op">*</span>PopMale]
+un[, PopT <span class="op">:</span><span class="er">=</span><span class="st"> </span>PopF <span class="op">+</span><span class="st"> </span>PopM]
+un[, <span class="kw">c</span>(<span class="st">&quot;PopFemale&quot;</span>, <span class="st">&quot;PopMale&quot;</span>)<span class="op">:</span><span class="er">=</span><span class="ot">NULL</span>]
+<span class="kw">setkey</span>(un, Continent, Country, Year, AgeGrp)
+un</code></pre></div>
+<pre><code>##        Continent Country Year AgeGrp AgeGrpStart   PopF   PopM    PopT
+##     1:    Africa Algeria 1950    0-4           0 688027 715107 1403134
+##     2:    Africa Algeria 1950  10-14          10 518022 529938 1047960
+##     3:    Africa Algeria 1950  15-19          15 453872 488349  942221
+##     4:    Africa Algeria 1950  20-24          20 385816 396394  782210
+##     5:    Africa Algeria 1950  25-29          25 302698 317326  620024
+##    ---                                                                
+## 47942:   Oceania Vanuatu 2015  75-79          75   1117    908    2025
+## 47943:   Oceania Vanuatu 2015  80-84          80    430    404     834
+## 47944:   Oceania Vanuatu 2015  85-89          85    159    148     307
+## 47945:   Oceania Vanuatu 2015  90-94          90     41     36      77
+## 47946:   Oceania Vanuatu 2015  95-99          95      7      5      12</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(un)</code></pre></div>
+<pre><code>## Classes 'data.table' and 'data.frame':   47946 obs. of  8 variables:
+##  $ Continent  : chr  &quot;Africa&quot; &quot;Africa&quot; &quot;Africa&quot; &quot;Africa&quot; ...
+##  $ Country    : chr  &quot;Algeria&quot; &quot;Algeria&quot; &quot;Algeria&quot; &quot;Algeria&quot; ...
+##  $ Year       : int  1950 1950 1950 1950 1950 1950 1950 1950 1950 1950 ...
+##  $ AgeGrp     : chr  &quot;0-4&quot; &quot;10-14&quot; &quot;15-19&quot; &quot;20-24&quot; ...
+##  $ AgeGrpStart: int  0 10 15 20 25 30 35 40 45 5 ...
+##  $ PopF       : num  688027 518022 453872 385816 302698 ...
+##  $ PopM       : num  715107 529938 488349 396394 317326 ...
+##  $ PopT       : num  1403134 1047960 942221 782210 620024 ...
+##  - attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt; 
+##  - attr(*, &quot;sorted&quot;)= chr  &quot;Continent&quot; &quot;Country&quot; &quot;Year&quot; &quot;AgeGrp&quot;</code></pre>
 </div>
 </div>
 <div id="exercise-answers" class="section level2">
@@ -314,7 +453,20 @@ div.tocify {
 <li>Filter to select Portugal and the years 1950 and 2015 (hint use <code>%in% c(...)</code>)</li>
 </ol>
 <p><strong>What do you notice about the variable <code>AgeGrp</code>?</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pt &lt;-<span class="st"> </span>un[Country<span class="op">==</span><span class="st">&quot;Portugal&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1950</span>, <span class="dv">2015</span>)]
+pt</code></pre></div>
+<pre><code>##     Continent  Country Year AgeGrp AgeGrpStart   PopF   PopM   PopT
+##  1:    Europe Portugal 1950    0-4           0 438528 459152 897680
+##  2:    Europe Portugal 1950  10-14          10 395605 407357 802962
+##  3:    Europe Portugal 1950  15-19          15 406538 402632 809170
+##  4:    Europe Portugal 1950  20-24          20 379836 380165 760001
+##  5:    Europe Portugal 1950  25-29          25 345823 333749 679572
+## ---                                                                
+## 34:    Europe Portugal 2015  75-79          75 253042 186212 439254
+## 35:    Europe Portugal 2015  80-84          80 208866 133651 342517
+## 36:    Europe Portugal 2015  85-89          85 120196  61423 181619
+## 37:    Europe Portugal 2015  90-94          90  48839  20424  69263
+## 38:    Europe Portugal 2015  95-99          95  10927   3331  14258</code></pre>
 </div>
 <div id="world-population" class="section level3">
 <h3>World Population</h3>
@@ -326,7 +478,20 @@ div.tocify {
 <li>Create <code>TotF</code>, <code>TotM and</code>Total<code>as the total for females, males and both (hint: use</code>un[ .(TotF = sum(PopF), … ), by = …]`).</li>
 <li>Look at the <code>wp</code>.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wp &lt;-<span class="st"> </span>un[, .(<span class="dt">TotF =</span> <span class="kw">sum</span>(PopF), <span class="dt">TotM =</span> <span class="kw">sum</span>(PopM), <span class="dt">Total =</span> <span class="kw">sum</span>(PopT)), by =<span class="st"> </span>Year]
+wp</code></pre></div>
+<pre><code>##     Year    TotF    TotM   Total
+##  1: 1950 1.3e+09 1.3e+09 2.5e+09
+##  2: 1955 1.4e+09 1.4e+09 2.8e+09
+##  3: 1960 1.5e+09 1.5e+09 3.0e+09
+##  4: 1965 1.7e+09 1.7e+09 3.3e+09
+##  5: 1970 1.8e+09 1.8e+09 3.7e+09
+## ---                             
+## 10: 1995 2.8e+09 2.9e+09 5.7e+09
+## 11: 2000 3.0e+09 3.1e+09 6.1e+09
+## 12: 2005 3.2e+09 3.3e+09 6.5e+09
+## 13: 2010 3.4e+09 3.5e+09 6.9e+09
+## 14: 2015 3.6e+09 3.7e+09 7.3e+09</code></pre>
 </div>
 <div id="population-by-continent" class="section level3">
 <h3>Population by Continent</h3>
@@ -339,7 +504,21 @@ div.tocify {
 <li>Create <code>TotF</code>, <code>TotM and</code>Total` as the total for females, males and both.</li>
 <li>Look at the <code>ct</code>.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span>un[Year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1950</span>, <span class="dv">2015</span>),
+         .(<span class="dt">TotF =</span> <span class="kw">sum</span>(PopF), <span class="dt">TotM =</span> <span class="kw">sum</span>(PopM), <span class="dt">Total =</span> <span class="kw">sum</span>(PopT)), 
+         by =<span class="st"> </span>.(Continent, Year)]
+ct</code></pre></div>
+<pre><code>##     Continent Year    TotF    TotM   Total
+##  1:    Africa 1950 1.1e+08 1.1e+08 2.3e+08
+##  2:    Africa 2015 6.0e+08 6.0e+08 1.2e+09
+##  3:  Americas 1950 1.7e+08 1.7e+08 3.4e+08
+##  4:  Americas 2015 5.0e+08 4.9e+08 9.8e+08
+##  5:      Asia 1950 6.8e+08 7.1e+08 1.4e+09
+##  6:      Asia 2015 2.1e+09 2.2e+09 4.4e+09
+##  7:    Europe 1950 2.9e+08 2.6e+08 5.5e+08
+##  8:    Europe 2015 3.8e+08 3.6e+08 7.4e+08
+##  9:   Oceania 1950 6.1e+06 6.3e+06 1.2e+07
+## 10:   Oceania 2015 1.9e+07 1.9e+07 3.9e+07</code></pre>
 <p>What changes do you observe?</p>
 </div>
 <div id="population-by-country" class="section level3">
@@ -354,7 +533,23 @@ div.tocify {
 <li>Create <code>TotF</code>, <code>TotM and</code>Total<code>as the total for females, males and both. Keep  the variable</code>Continent<code>in the</code>by` part.</li>
 <li>Look at the <code>cy</code>.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cy &lt;-<span class="st"> </span>un[Year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1950</span>, <span class="dv">2015</span>),
+         .(<span class="dt">TotF =</span> <span class="kw">sum</span>(PopF), <span class="dt">TotM =</span> <span class="kw">sum</span>(PopM), <span class="dt">Total =</span> <span class="kw">sum</span>(PopT)), 
+         by =<span class="st"> </span>.(Continent, Country, Year)][
+           <span class="kw">order</span>(Continent, Country, Year)]
+cy</code></pre></div>
+<pre><code>##      Continent         Country Year    TotF    TotM   Total
+##   1:    Africa         Algeria 1950 4.4e+06 4.5e+06 8.9e+06
+##   2:    Africa         Algeria 2015 2.0e+07 2.0e+07 4.0e+07
+##   3:    Africa          Angola 1950 2.3e+06 2.2e+06 4.5e+06
+##   4:    Africa          Angola 2015 1.4e+07 1.4e+07 2.8e+07
+##   5:    Africa           Benin 1950 1.2e+06 1.1e+06 2.3e+06
+##  ---                                                       
+## 362:   Oceania Solomon Islands 2015 2.9e+05 3.0e+05 5.9e+05
+## 363:   Oceania           Tonga 1950 2.3e+04 2.4e+04 4.7e+04
+## 364:   Oceania           Tonga 2015 5.3e+04 5.3e+04 1.1e+05
+## 365:   Oceania         Vanuatu 1950 2.3e+04 2.5e+04 4.8e+04
+## 366:   Oceania         Vanuatu 2015 1.3e+05 1.3e+05 2.6e+05</code></pre>
 </div>
 <div id="portugal-1950-to-2015" class="section level3">
 <h3>Portugal: 1950 to 2015</h3>
@@ -365,7 +560,10 @@ div.tocify {
 <li>Select Portugal in the <code>cy</code> dataset.</li>
 <li>Look at other countries to see what is happening.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cy[Country <span class="op">==</span><span class="st"> &quot;Portugal&quot;</span>]</code></pre></div>
+<pre><code>##    Continent  Country Year    TotF    TotM   Total
+## 1:    Europe Portugal 1950 4370680 4046291 8.4e+06
+## 2:    Europe Portugal 2015 5482495 4935968 1.0e+07</code></pre>
 </div>
 <div id="high-low-female-proportion" class="section level3">
 <h3>High &amp; Low Female Proportion</h3>
@@ -377,7 +575,57 @@ div.tocify {
 <li>Order <code>PropF</code> from the lowest to the highest and select the first 10 observations for both 1950 and 2015.</li>
 <li>Order <code>PropF</code> from the highest to lowest and select the first 10 observations for both 1950 and 2015.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp &lt;-<span class="st"> </span>cy[, <span class="st">`</span><span class="dt">:=</span><span class="st">`</span>(<span class="dt">PropF=</span>TotF<span class="op">/</span>Total, <span class="dt">PropM=</span>TotM<span class="op">/</span>Total)][
+  , .(Country, Year, PropF)]
+
+pp[<span class="kw">order</span>(Year, PropF)][Year<span class="op">==</span><span class="dv">1950</span>][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</code></pre></div>
+<pre><code>##                   Country Year PropF
+##  1:                Kuwait 1950  0.40
+##  2:              Maldives 1950  0.43
+##  3: Sao Tome and Principe 1950  0.44
+##  4:       Solomon Islands 1950  0.45
+##  5:              Pakistan 1950  0.45
+##  6:             Sri Lanka 1950  0.46
+##  7:               Bahrain 1950  0.46
+##  8:           Afghanistan 1950  0.47
+##  9:      Papua New Guinea 1950  0.47
+## 10:          Burkina Faso 1950  0.48</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp[<span class="kw">order</span>(Year, PropF)][Year<span class="op">==</span><span class="dv">2015</span>][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</code></pre></div>
+<pre><code>##                  Country Year PropF
+##  1:                Qatar 2015  0.25
+##  2: United Arab Emirates 2015  0.27
+##  3:                 Oman 2015  0.35
+##  4:              Bahrain 2015  0.38
+##  5:               Kuwait 2015  0.43
+##  6:         Saudi Arabia 2015  0.43
+##  7:             Maldives 2015  0.43
+##  8:    Equatorial Guinea 2015  0.45
+##  9:               Bhutan 2015  0.47
+## 10:                India 2015  0.48</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp[<span class="kw">order</span>(Year, <span class="op">-</span>PropF)][Year<span class="op">==</span><span class="dv">1950</span>][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</code></pre></div>
+<pre><code>##                Country Year PropF
+##  1:            Estonia 1950  0.57
+##  2:            Ukraine 1950  0.57
+##  3:             Latvia 1950  0.57
+##  4: Russian Federation 1950  0.57
+##  5:            Belarus 1950  0.56
+##  6:          Lithuania 1950  0.55
+##  7:              Niger 1950  0.55
+##  8:            Grenada 1950  0.54
+##  9:           Barbados 1950  0.54
+## 10:            Germany 1950  0.54</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp[<span class="kw">order</span>(Year,<span class="op">-</span><span class="st"> </span>PropF)][Year<span class="op">==</span><span class="dv">2015</span>][<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</code></pre></div>
+<pre><code>##                Country Year PropF
+##  1:             Latvia 2015  0.54
+##  2:          Lithuania 2015  0.54
+##  3:            Ukraine 2015  0.54
+##  4: Russian Federation 2015  0.54
+##  5:            Belarus 2015  0.53
+##  6:            Estonia 2015  0.53
+##  7:            Armenia 2015  0.53
+##  8:        El Salvador 2015  0.53
+##  9:           Portugal 2015  0.53
+## 10:            Hungary 2015  0.52</code></pre>
 </div>
 <div id="portuguese-females-over-time" class="section level3">
 <h3>Portuguese Females Over Time</h3>
@@ -387,7 +635,10 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li>Select Portugal from the <code>pp</code> dataset.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type answer here.</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pp[Country<span class="op">==</span><span class="st">&quot;Portugal&quot;</span>]</code></pre></div>
+<pre><code>##     Country Year PropF
+## 1: Portugal 1950  0.52
+## 2: Portugal 2015  0.53</code></pre>
 </div>
 </div>
 <div class="footnotes">
