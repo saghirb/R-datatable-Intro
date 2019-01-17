@@ -1,10 +1,39 @@
-# Teaching materials: Intro to R & `data.table`
+# Overview
 
-> Teaching materials for "[Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf)"
+> Repsitory of teaching materials for "[Getting Started in R - Tinyverse Edition](https://github.com/eddelbuettel/gsir-te/raw/master/Getting-Started-in-R.pdf)"
+workshop (course).
 
-An introduction to basic R concepts and the `data.table` package.
+The workshop covers basic R concepts and `data.table` basics. The target audience 
+anyone from R beginners to "intermediate" R users. 
 
-![](GSIR-te-Workshop.png)
+# Running the Workshop 
+
+- Use the workshop presentation (HTML):
+    + (https://github.com/saghirb/R-datatable-Intro/tree/master/Presentation)
+- Share the following zip file with the participants:
+    + (https://github.com/saghirb/R-datatable-Intro/raw/master/Share/GSiRdt.zip)
+    + Ask them to Unzip
+    
+## Part 1
+
+- After presenting and demonstrating the basic R concepts:
+    + Participants should work through `Share/R-Concepts/Base-R-Exercises.pdf` in the zip file.
+
+## Part 2    
+
+- After presenting and demonstrating the `data.table` basics:
+  + Ask the participant to double click on `Share/World-Popn/World-Popn.Rproj` to open
+  Rstudio with the right setup.
+  + Participants should then work through `Share/World-Popn/World-Population-Exercises.Rmd` 
+  in the zip file.
+  + Start by knitting the document.
+  + Ask them to change the name to their name and knit again.
+  
+  
+## At the End of the Course
+
+- Share the solutions to the solutions to the World Population exercises
+    + (https://github.com/saghirb/R-datatable-Intro/tree/master/Exercises/World-Popn)
 
 # Why `data.table`?
 
@@ -19,29 +48,10 @@ development team.
 
 For more information see [http://r-datatable.com](http://r-datatable.com)
 
-# Contents
+# Acknowledgements
 
 The materials presented in this repository are complementary to [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (co-authored with [Dirk
 Eddelbuettel](https://github.com/eddelbuettel/))
-
-- Presentation
-    + Main presentation for workshop
-- Exercises 
-    + Exercise sheet: Base R concepts 
-    + Case Study: United Nations (UN) World Population Data 
-- Share-During
-    + Materials to distribute **during** the workshop (ZIP)
-        + Base R Exercises (PDF)
-        + [Getting Started in R - Tinyverse Edition](https://eddelbuettel.github.io/gsir-te/Getting-Started-in-R.pdf) (PDF)
-        + Chick weight data (CSV)
-        + World population exercises (R Markdown)
-        + Subset of UN world population data (CSV)
-- Share-After (ZIP)
-    + Materials to distribute **after** the workshop 
-        + Solutions to world population exercises (HTML)
-        + Main presentation (HTML)
-
-# Acknowledgements
 
 Thanks to [Matt Dowle](https://github.com/mattdowle), [Arun Srinivasan](https://github.com/arunsrinivasan) and all the `data.table` [team](https://github.com/orgs/Rdatatable/people) and contributors for such a great package.
 
