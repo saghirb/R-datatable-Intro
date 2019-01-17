@@ -32,7 +32,7 @@ anyone from R beginners to "intermediate" R users.
   
 ## At the End of the Course
 
-- Share the solutions to the solutions to the World Population exercises
+- Share the solutions to the World Population exercises
     + (https://github.com/saghirb/R-datatable-Intro/tree/master/Exercises/World-Popn)
 
 # Why `data.table`?
