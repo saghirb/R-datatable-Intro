@@ -35,9 +35,10 @@ anyone from R beginners to "intermediate" R users.
 - Share the solutions to the World Population exercises
     + (https://github.com/saghirb/R-datatable-Intro/tree/master/Exercises/World-Popn)
 
-# Re-creating the workshop materials.
+# Re-creating the Workshop Materials.
 
-Run the _make.R script in R.
+Run the [_make.R](https://github.com/saghirb/R-datatable-Intro/blob/master/_make.R) 
+script in the R console.
 
 # Why `data.table`?
 
