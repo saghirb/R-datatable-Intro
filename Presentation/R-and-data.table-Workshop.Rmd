@@ -255,7 +255,7 @@ ls()
 
 ```
 
-### Use `rm()` to remove objects
+### Use `rm()` to *remove* objects
 ```{r rmObjects}
 rm(a1, b1, c1, d1, e1, AgE) #<<
 ls()

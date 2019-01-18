@@ -1,0 +1,17 @@
+# Data Source and Information
+
+The "World-Population.csv" file is a subset of the following United Nations
+Population data:
+
+- Dataset: "WPP2017_PopulationByAgeSex_Medium.csv
+- Source: https://population.un.org/wpp/Download/Standard/CSV/
+
+## CSV Contains:
+
+- Population by 5-year age groups, annually from 1950 to 2100.
+    + Note: for years below 1990, last age available is 80+ (80 and over); for 1990 and over, age groups are available until 100+ (100 and over).
+
+- Key variables
+    + PopMale: Male population in the age group (thousands)
+    + PopFemale: Female population in the age group (thousands)
+    + PopTotal: Total population in the age group (thousands)

@@ -37,6 +37,9 @@ file.copy(here("Exercises", "World-Popn", "World-Population-Exercises.Rmd"),
 file.copy(here("Exercises", "World-Popn", "World-Population.csv"),
           here("Share", "World-Popn"), overwrite = TRUE)
 
+file.copy(here("Exercises", "World-Popn", "World-Population-Data-Info.txt"),
+          here("Share", "World-Popn"), overwrite = TRUE)
+
 rstudioapi::initializeProject(path = here("Share", "World-Popn"))
 
 # Using here() function with zip results in full paths in the zip files :(
