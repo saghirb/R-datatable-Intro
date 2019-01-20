@@ -338,7 +338,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">data.table: World Population Exercise</h1>
 <h4 class="author"><em>Saghir Bashir</em></h4>
-<h4 class="date"><em>Fri 18 Jan 2019 (16:52:03)</em></h4>
+<h4 class="date"><em>Sun 20 Jan 2019 (15:31:51)</em></h4>
 
 </div>
 
@@ -371,7 +371,7 @@ div.tocify {
 </div>
 <div id="read-in-the-data" class="section level2">
 <h2>Read in the data</h2>
-<p>First the load the <code>data.table</code> package (hint: use the <code>library()</code> function). Then use the <code>fread()</code> function to read in the data file <code>World-Population.csv</code> in an object called <code>un</code>. Finally look at the <code>un</code> dataset using the <code>str()</code> function.</p>
+<p>First load the <code>data.table</code> package (hint: use the <code>library()</code> function). Then use the <code>fread()</code> function to read in the data file <code>World-Population.csv</code> in an object called <code>un</code>. Finally look at the <code>un</code> dataset using the <code>str()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)
 un &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="st">&quot;World-Population.csv&quot;</span>)
 un</code></pre></div>
@@ -571,7 +571,8 @@ cy</code></pre></div>
 <p>Which countries had the highest and lowest proportion of females in 1950 and 2015?</p>
 </blockquote>
 <ol style="list-style-type: decimal">
-<li>Start with dataset <code>cy</code> to create a new dataset called <code>pp</code>. 2· Calculate a new variables called <code>PropF</code> and <code>PropM</code> for the proportion of females and males, respectively.</li>
+<li>Start with dataset <code>cy</code> to create a new dataset called <code>pp</code>.</li>
+<li>Calculate two new variables called <code>PropF</code> and <code>PropM</code> for the proportion of females and males, respectively.</li>
 <li>Order <code>PropF</code> from the lowest to the highest and select the first 10 observations for both 1950 and 2015.</li>
 <li>Order <code>PropF</code> from the highest to lowest and select the first 10 observations for both 1950 and 2015.</li>
 </ol>

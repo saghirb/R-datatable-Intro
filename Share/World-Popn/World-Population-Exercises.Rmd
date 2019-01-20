@@ -50,7 +50,7 @@ and 2015?
 
 ## Read in the data
 
-First the load the `data.table` package (hint: use the `library()` function). Then
+First load the `data.table` package (hint: use the `library()` function). Then
 use the `fread()` function to read in the data file `World-Population.csv` in an
 object called `un`. Finally look at the `un` dataset using the `str()` function.
 
@@ -161,7 +161,7 @@ the variable `Continent` in the `by` part.
 and 2015?
 
 1. Start with dataset `cy` to create a new dataset called `pp`.
-2· Calculate a new variables called `PropF` and `PropM` for the proportion of females and males, respectively.
+2. Calculate two new variables called `PropF` and `PropM` for the proportion of females and males, respectively.
 3. Order `PropF` from the lowest to the highest and select the first 10 observations
 for both 1950 and 2015.
 4. Order `PropF` from the highest to lowest and select the first 10 observations
