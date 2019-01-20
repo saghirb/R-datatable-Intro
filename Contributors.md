@@ -6,4 +6,4 @@ Contributors
 
 ## List of Contributors
 - [Matt Dowle](https://github.com/mattdowle)
-
+- [Raquel H. Ribeiro](https://github.com/raquelhr)
