@@ -3,8 +3,9 @@
 > Repsitory of teaching materials for "[Getting Started in R - Tinyverse Edition](https://github.com/eddelbuettel/gsir-te/raw/master/Getting-Started-in-R.pdf)"
 workshop (course).
 
-The workshop covers basic R concepts and `data.table` basics. The target audience 
-anyone from R beginners to "intermediate" R users. 
+This repository is contains materials for basic R concepts and `data.table` basics 
+(~4 hour) workshop. The target audience anyone from R beginners to "intermediate" R users. 
+It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 
 # Running the Workshop 
 
@@ -32,8 +33,8 @@ anyone from R beginners to "intermediate" R users.
   
 ## At the End of the Course
 
-- Share the solutions to the World Population exercises
-    + (https://github.com/saghirb/R-datatable-Intro/tree/master/Exercises/World-Popn)
+- Share the solutions to the World Population exercises (zip file)
+    + (https://github.com/saghirb/R-datatable-Intro/raw/master/Share/World-Popn-solutions.zip)
 
 # Re-creating the Workshop Materials.
 
