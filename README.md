@@ -4,7 +4,7 @@
 workshop (course).
 
 This repository is contains materials for basic R concepts and `data.table` basics 
-(~4 hour) workshop. The target audience anyone from R beginners to "intermediate" R users. 
+(~4 hour) workshop. The target audience is R beginners to "intermediate" R users. 
 It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 
 # Running the Workshop 
