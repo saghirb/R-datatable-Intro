@@ -797,3 +797,14 @@ class: inverse, center, middle
 
 ## Follow us on Twitter at: [@ilustat](https://twitter.com/ilustat)
 
+---
+class: inverse, center, middle
+
+## This work is licensed under the
+
+## Creative Commons Attribution-NonCommercial 4.0 International License.
+
+## To view a copy of this license, visit
+
+## http://creativecommons.org/licenses/by-nc/4.0/
+
