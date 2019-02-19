@@ -1,4 +1,4 @@
-## Run all file to prepare "Getting Started in R and data.table" workshop
+## Run all files to prepare "Getting Started in R and data.table" workshop
 
 # Setup
 library(here)
@@ -40,6 +40,7 @@ file.copy(here("Exercises", "World-Popn", "World-Population.csv"),
 file.copy(here("Exercises", "World-Popn", "World-Population-Data-Info.txt"),
           here("Share", "World-Popn"), overwrite = TRUE)
 
+# Creating (initialising) an RStudio project
 rstudioapi::initializeProject(path = here("Share", "World-Popn"))
 
 # Using here() function with zip results in full paths in the zip files :(
