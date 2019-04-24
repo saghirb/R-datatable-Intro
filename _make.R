@@ -16,7 +16,8 @@ rmarkdown::render(here("Exercises", "World-Popn", "World-Population-Solutions.Rm
 
 # Create zip files to share with participants
 # First empty the share folder and recreate the directory structure.
-unlink(here("Share/*"), recursive = TRUE)
+unlink(here("Share/"), recursive = TRUE)
+dir.create(here("Share"))
 dir.create(here("Share", "R-Concepts"))
 dir.create(here("Share", "Slides-Notes"))
 dir.create(here("Share", "World-Popn"))

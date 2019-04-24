@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.15)  19 FEB 2019 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.10.15)  24 APR 2019 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1963,8 +1963,8 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 6.72005pt on input line 61.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 71.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 81.
+(Font)              scaled to size 8.64006pt on input line 72.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 84.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1972,75 +1972,75 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package mdframed Info: mdframed works in twoside mode on input line 84.
+Package mdframed Info: mdframed works in twoside mode on input line 87.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 95.
+(Font)              scaled to size 9.60007pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.82996pt on input line 95.
+(Font)              scaled to size 8.82996pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.82996pt on input line 95.
+(Font)              scaled to size 8.82996pt on input line 100.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 97.
+(hyperref)                be the same. Added a new anchor on input line 104.
 
-Package mdframed Info: mdframed works in twoside mode on input line 99.
-Package mdframed Info: mdframed works in twoside mode on input line 111.
-Package mdframed Info: mdframed works in twoside mode on input line 121.
+Package mdframed Info: mdframed works in twoside mode on input line 106.
+Package mdframed Info: mdframed works in twoside mode on input line 119.
+Package mdframed Info: mdframed works in twoside mode on input line 130.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 133.
+(hyperref)                be the same. Added a new anchor on input line 144.
 
-Package mdframed Info: mdframed works in twoside mode on input line 135.
 Package mdframed Info: mdframed works in twoside mode on input line 146.
-Package mdframed Info: mdframed works in twoside mode on input line 160.
+Package mdframed Info: mdframed works in twoside mode on input line 158.
 Package mdframed Info: mdframed works in twoside mode on input line 173.
+Package mdframed Info: mdframed works in twoside mode on input line 187.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 182.
+(hyperref)                be the same. Added a new anchor on input line 197.
 
-Package mdframed Info: mdframed works in twoside mode on input line 189.
-Package mdframed Info: mdframed works in twoside mode on input line 202.
-Package mdframed Info: mdframed works in twoside mode on input line 221.
-Package mdframed Info: mdframed works in twoside mode on input line 239.
+Package mdframed Info: mdframed works in twoside mode on input line 204.
+Package mdframed Info: mdframed works in twoside mode on input line 218.
+Package mdframed Info: mdframed works in twoside mode on input line 238.
+Package mdframed Info: mdframed works in twoside mode on input line 257.
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last box will be empty
 (mdframed)                you have to change it manually
 (mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 247.
+(mdframed)                or something else on input line 265.
 
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 247.
+(Font)              scaled to size 6.72005pt on input line 265.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.18097pt on input line 247.
+(Font)              scaled to size 6.18097pt on input line 265.
 Package xwatermark Info: 'printwatermark=false': no watermark printed.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Package mdframed Info: mdframed works in twoside mode on input line 254.
-Package mdframed Info: mdframed works in twoside mode on input line 266.
-Package mdframed Info: mdframed works in twoside mode on input line 276.
-Package mdframed Info: mdframed works in twoside mode on input line 289.
-Package mdframed Info: mdframed works in twoside mode on input line 297.
+Package mdframed Info: mdframed works in twoside mode on input line 273.
+Package mdframed Info: mdframed works in twoside mode on input line 286.
+Package mdframed Info: mdframed works in twoside mode on input line 296.
+Package mdframed Info: mdframed works in twoside mode on input line 310.
+Package mdframed Info: mdframed works in twoside mode on input line 319.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 311.
+(hyperref)                be the same. Added a new anchor on input line 335.
 
-Package mdframed Info: mdframed works in twoside mode on input line 313.
-Package mdframed Info: mdframed works in twoside mode on input line 325.
+Package mdframed Info: mdframed works in twoside mode on input line 337.
+Package mdframed Info: mdframed works in twoside mode on input line 350.
 
 Package caption Warning: Unused \captionsetup[table] on input line 244.
 See the caption package documentation for explanation.
@@ -2065,19 +2065,19 @@ Package catoptions Warning: Undefined options
 (catoptions)                fontenc.sty,T1,. 
 (catoptions)                Default action already taken in each case .
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 344.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 370.
 (./Base-R-Exercises.xwm) (./Base-R-Exercises.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
 Package rerunfilecheck Info: File `Base-R-Exercises.out' has not changed.
 (rerunfilecheck)             Checksum: C7604E783AB9A166F2DA583B1198EFCB;1664.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 370.
  ) 
 Here is how much of TeX's memory you used:
- 36694 strings out of 493013
- 679162 string characters out of 6135681
- 832907 words of memory out of 5000000
+ 36719 strings out of 493013
+ 679704 string characters out of 6135681
+ 834283 words of memory out of 5000000
  39506 multiletter control sequences out of 15000+600000
  58367 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2092,10 +2092,10 @@ e1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr
 onts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvr8a.pfb>
-Output written on Base-R-Exercises.pdf (2 pages, 147377 bytes).
+Output written on Base-R-Exercises.pdf (2 pages, 147852 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 13 named destinations out of 1000 (max. 500000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
  36573 words of extra memory for PDF output out of 42996 (max. 10000000)
 
