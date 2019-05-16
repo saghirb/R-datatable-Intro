@@ -23,9 +23,9 @@ It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 ## Part 2    
 
 - After presenting and demonstrating the `data.table` basics:
-  + Ask the participant to double click on `Share/World-Popn/World-Popn.Rproj` to open
+  + Ask the participant to double click on `Share/World-Popn/World-Popn-dt.Rproj` to open
   Rstudio with the right setup.
-  + Participants should then work through `Share/World-Popn/World-Population-Exercises.Rmd` 
+  + Participants should then work through `Share/World-Popn/World-Population-dt-Exercises.Rmd` 
   in the zip file.
   + Start by knitting the document.
   + Ask them to change the name to their name and knit again.
@@ -34,7 +34,7 @@ It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 ## At the End of the Course
 
 - Share the solutions to the World Population exercises (zip file)
-    + (https://github.com/saghirb/R-datatable-Intro/raw/master/Share/World-Popn-solutions.zip)
+    + (https://github.com/saghirb/R-datatable-Intro/raw/master/Share/World-Popn-dt-Solutions.zip)
 
 # Re-creating the Workshop Materials.
 

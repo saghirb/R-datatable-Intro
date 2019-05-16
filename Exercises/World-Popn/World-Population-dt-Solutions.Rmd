@@ -1,5 +1,5 @@
 ---
-title: 'data.table: World Population Exercise'
+title: 'data.table: World Population - Solutions'
 author: "Saghir Bashir"
 date: "`r format(Sys.time(), '%a %d %b %Y (%H:%M:%S)')`"
 output:

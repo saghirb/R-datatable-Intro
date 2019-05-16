@@ -764,9 +764,9 @@ class: inverse, center, middle
 
 ### World Population Data
 
-### Download: http://example.com/real-link-here
+### Download: https://ilustat.com/shared/GSiRdt.zip
 
-### Double Click on "World-Popn.Rproj"
+### Double Click on "World-Popn-dt.Rproj"
 
 
 ---

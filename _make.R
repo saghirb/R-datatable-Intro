@@ -9,9 +9,9 @@ rmarkdown::render(here("Presentation", "R-and-data.table-Workshop.Rmd"),
                   clean = TRUE, output_dir = here("Presentation"))
 rmarkdown::render(here("Exercises", "Base-R", "Base-R-Exercises.Rmd"), clean = TRUE,
                   output_dir = here("Exercises", "Base-R"))
-rmarkdown::render(here("Exercises", "World-Popn", "World-Population-Exercises.Rmd"),
+rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Exercises.Rmd"),
                   clean = TRUE, output_dir = here("Exercises", "World-Popn"))
-rmarkdown::render(here("Exercises", "World-Popn", "World-Population-Solutions.Rmd"),
+rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Solutions.Rmd"),
                   clean = TRUE, output_dir = here("Exercises", "World-Popn"))
 
 # Create zip files to share with participants
@@ -32,7 +32,7 @@ file.copy(here("Presentation", "R-and-data.table-Workshop.html"),
 download.file("https://github.com/eddelbuettel/gsir-te/raw/master/Getting-Started-in-R.pdf",
               here("Share", "Slides-Notes", "Getting-Started-in-R.pdf"))
 
-file.copy(here("Exercises", "World-Popn", "World-Population-Exercises.Rmd"),
+file.copy(here("Exercises", "World-Popn", "World-Population-dt-Exercises.Rmd"),
           here("Share", "World-Popn"), overwrite = TRUE)
 
 file.copy(here("Exercises", "World-Popn", "World-Population.csv"),
@@ -43,6 +43,8 @@ file.copy(here("Exercises", "World-Popn", "World-Population-Data-Info.txt"),
 
 # Creating (initialising) an RStudio project
 rstudioapi::initializeProject(path = here("Share", "World-Popn"))
+file.rename(here("Share", "World-Popn", "World-Popn.Rproj"),
+          here("Share", "World-Popn", "World-Popn-dt.Rproj"))
 
 # Using here() function with zip results in full paths in the zip files :(
 # Not beautiful: Using setwd to overcome the full paths issue above.
@@ -50,6 +52,6 @@ setwd(here())
 zip(here("Share", "GSiRdt.zip"), "./Share/", extras = "-FS")
 
 setwd(here("Exercises", "World-Popn"))
-zip(here("Share", "World-Popn-solutions.zip"), "World-Population-Solutions.html",
+zip(here("Share", "World-Popn-dt-Solutions.zip"), "World-Population-dt-Solutions.html",
     extras = "-FS")
 setwd(here())
