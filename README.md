@@ -3,7 +3,7 @@
 > Repsitory of teaching materials for "[Getting Started in R - Tinyverse Edition](https://github.com/eddelbuettel/gsir-te/raw/master/Getting-Started-in-R.pdf)"
 workshop (course).
 
-This repository is contains materials for basic R concepts and `data.table` basics 
+This repository contains materials for basic R concepts and `data.table` basics 
 (~4 hour) workshop. The target audience is R beginners to "intermediate" R users. 
 It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 
