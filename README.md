@@ -7,7 +7,7 @@ This repository is contains materials for basic R concepts and `data.table` basi
 (~4 hour) workshop. The target audience is R beginners to "intermediate" R users. 
 It is ideal for R meetup groups, R user groups or as pre-conference workshop.
 
-![Title Slide](images/Presentation/images/R-and-data.table-Title-Slide.png)
+![Title Slide](Presentation/images/R-and-data.table-Title-Slide.png)
 
 # Running the Workshop 
 
