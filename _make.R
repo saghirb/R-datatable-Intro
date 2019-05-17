@@ -14,6 +14,14 @@ rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Exercises
 rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Solutions.Rmd"),
                   clean = TRUE, output_dir = here("Exercises", "World-Popn"))
 
+# Create a PDF version of the slides to share
+library(webshot)
+htmlSlides <- paste0("file://",
+                     normalizePath(here("Presentation", "R-and-data.table-Workshop.html")))
+webshot(htmlSlides, here("Presentation", "R-and-data.table-Workshop.pdf"),
+        vwidth = 960, vheight = 540, zoom = 1.5, cliprect = "viewport")
+
+
 # Create zip files to share with participants
 # First empty the share folder and recreate the directory structure.
 unlink(here("Share/"), recursive = TRUE)
@@ -28,6 +36,10 @@ file.copy(here("Exercises", "Base-R", "Base-R-Exercises.pdf"),
 
 file.copy(here("Presentation", "R-and-data.table-Workshop.html"),
           here("Share", "Slides-Notes"), overwrite = TRUE)
+
+file.copy(here("Presentation", "R-and-data.table-Workshop.pdf"),
+          here("Share", "Slides-Notes"), overwrite = TRUE)
+
 
 download.file("https://github.com/eddelbuettel/gsir-te/raw/master/Getting-Started-in-R.pdf",
               here("Share", "Slides-Notes", "Getting-Started-in-R.pdf"))
