@@ -21,6 +21,9 @@ htmlSlides <- paste0("file://",
 webshot(htmlSlides, here("Presentation", "R-and-data.table-Workshop.pdf"),
         vwidth = 960, vheight = 540, zoom = 1.5, cliprect = "viewport")
 
+# Create image of first slide to include as part of README.md
+webshot(htmlSlides, here("Presentation", "images", "R-and-data.table-Title-Slide.png"), delay = 20,
+        vwidth = 640, vheight = 360, zoom = 1.5, cliprect = "viewport")
 
 # Create zip files to share with participants
 # First empty the share folder and recreate the directory structure.
