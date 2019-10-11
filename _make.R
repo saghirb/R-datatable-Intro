@@ -14,6 +14,11 @@ rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Exercises
 rmarkdown::render(here("Exercises", "World-Popn", "World-Population-dt-Solutions.Rmd"),
                   clean = TRUE, output_dir = here("Exercises", "World-Popn"))
 
+# Create solutions for the Base R exercises
+knitr::purl(input = here("Exercises", "Base-R", "Base-R-Exercises.Rmd"),
+            output = here("Exercises", "Base-R", "Base-R-Solutions.R"),
+            documentation = 1L)
+
 # Create a PDF version of the slides to share
 library(webshot)
 htmlSlides <- paste0("file://",

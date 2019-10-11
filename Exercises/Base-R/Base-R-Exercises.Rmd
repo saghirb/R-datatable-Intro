@@ -74,11 +74,15 @@ output:
     keep_tex: false
 ---
 
-```{r setup, include=FALSE}
+```{r purlOnly, echo=FALSE, eval=FALSE}
+# Title: Exercise Sheet: Base R Concepts
+#  Name: Saghir Bashir
+#  Date: DD MMM YYYY
+```
+
+
+```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
-library(tidyverse)
-library(knitr)
-library(kableExtra)
 options(width=45)
 ```
 
@@ -97,7 +101,7 @@ Double click in the R (or RStudio) icon to start it.
 
 If an R command is not complete then R will show a plus sign (`+`) prompt
 on second and subsequent lines until the command syntax is correct.
-```{r continuation, echo=TRUE, eval=FALSE}
+```{r continuation, echo=TRUE, eval=FALSE, purl=FALSE}
 +
 ```
 To break out this, press the escape key (`ESC`).
