@@ -24,7 +24,7 @@ library(webshot)
 htmlSlides <- paste0("file://",
                      normalizePath(here("Presentation", "R-and-data.table-Workshop.html")))
 webshot(htmlSlides, here("Presentation", "R-and-data.table-Workshop.pdf"),
-        vwidth = 960, vheight = 540, zoom = 1.5, cliprect = "viewport")
+        vwidth = 960, vheight = 540, zoom = 1.0, cliprect = "viewport")
 
 # Create image of first slide to include as part of README.md
 webshot(htmlSlides, here("Presentation", "images", "R-and-data.table-Title-Slide.png"), delay = 20,
