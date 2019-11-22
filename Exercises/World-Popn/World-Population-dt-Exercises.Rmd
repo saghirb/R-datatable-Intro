@@ -80,7 +80,7 @@ to `Year` (hint: use the `setnames()` function).
 
 ## Exercise Answers
 
-### Portugal: 1950 v 2017
+### Portugal: 1950 v 2015
 
 > How did the Portuguese population change between 1950 and 2015?
 
@@ -93,12 +93,13 @@ to `Year` (hint: use the `setnames()` function).
 
 ```
 
+
 ### World Population
 
 > What is the total world population by year?
 
 1. Create a new object called `wp` to assign the total world population by year. 
-2. Create `TotF`, `TotM and `Total` as the total for females, males and both (hint:
+2. Create `TotF`, `TotM` and `Total` as the total for females, males and both (hint:
 use `un[  .(TotF = sum(PopF), ... ), by = ...]`).
 3. Look at the `wp`.
 
@@ -114,9 +115,8 @@ use `un[  .(TotF = sum(PopF), ... ), by = ...]`).
 
 1. Create a new object called `ct` to assign total population by continent. 
 2. Only keep data for 1950 and 2015.
-3. Create `TotF`, `TotM and `Total` as the total for females, males and both.
+3. Create `TotF`, `TotM` and `Total` as the total for females, males and both.
 4. Look at the `ct`.
-
 
 ```{r ContinentTotal}
 # Type answer here.
@@ -124,6 +124,7 @@ use `un[  .(TotF = sum(PopF), ... ), by = ...]`).
 ```
 
 What changes do you observe?
+
 
 ### Population by Country
 
@@ -166,8 +167,6 @@ and 2015?
 for both 1950 and 2015.
 4. Order `PropF` from the highest to lowest and select the first 10 observations
 for both 1950 and 2015.
-
-
 
 ```{r proportion}
 # Type answer here.
