@@ -21,14 +21,33 @@ knitr::purl(input = here("Exercises", "Base-R", "Base-R-Exercises.Rmd"),
 
 # Create a PDF version of the slides to share
 library(webshot)
+library(xaringan)
 htmlSlides <- paste0("file://",
                      normalizePath(here("Presentation", "R-and-data.table-Workshop.html")))
-webshot(htmlSlides, here("Presentation", "R-and-data.table-Workshop.pdf"),
-        vwidth = 960, vheight = 540, zoom = 1.0, cliprect = "viewport")
+# webshot(htmlSlides, here("Presentation", "R-and-data.table-Workshop.pdf"),
+#         vwidth = 960, vheight = 540, zoom = 1.0, cliprect = "viewport")
+
+decktape(
+  file = htmlSlides,
+  output = here("Presentation", "R-and-data.table-Workshop.pdf"),
+  args = "--chrome-arg=--allow-file-access-from-files --size '1280x720'",
+  docker = TRUE,
+  version = "",
+  open = FALSE
+)
 
 # Create image of first slide to include as part of README.md
-webshot(htmlSlides, here("Presentation", "images", "R-and-data.table-Title-Slide.png"), delay = 20,
-        vwidth = 640, vheight = 360, zoom = 1.5, cliprect = "viewport")
+# webshot(htmlSlides, here("Presentation", "images", "R-and-data.table-Title-Slide.png"), delay = 20,
+#         vwidth = 640, vheight = 360, zoom = 1.5, cliprect = "viewport")
+# decktape(
+#   file = htmlSlides,
+#   output = here("Presentation", "images", "R-and-data.table-Title-Slide.png"),
+#   args = "--chrome-arg=--allow-file-access-from-files --screenshots --slides '1' --size '640x360' --screenshots-format 'png'",
+#   docker = TRUE,
+#   version = "",
+#   open = FALSE
+# )
+
 
 # Create zip files to share with participants
 # First empty the share folder and recreate the directory structure.

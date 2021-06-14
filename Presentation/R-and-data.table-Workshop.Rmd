@@ -28,14 +28,11 @@ library(ggplot2)
 library(emojifont)
 
 # Making some aesthetic changes for this document
-theme_set(theme_gray(base_size = 14))
+theme_set(theme_gray(base_size = 20))
 # update_geom_defaults("point", list(size = 1.0))
-knitr::opts_chunk$set(fig.dim=c(7.8, 3.8), fig.retina=5, out.width="100%")
-
+knitr::opts_chunk$set(fig.dim = c(7.8, 3.8), fig.retina = 2, out.width = "100%")
 options(htmltools.dir.version = FALSE)
-
-# (https://www.garrickadenbuie.com/blog/2018/08/16/decouple-code-and-output-in-xaringan-slides/#using-knitr-fig-chunk)
-
+options(width = 120)
 ```
 
 class: middle, center
@@ -48,7 +45,7 @@ class: middle, center
 
 <br>
 
-### Saghir Bashir <br>ilustat.com<br>20th Nov 2019
+### Saghir Bashir <br>ilustat.com<br>14th June 2021
 
 
 ---
@@ -361,8 +358,9 @@ tail(CW) %>% kable(align = 'ccrr', caption = "Last 6 observations")
 # Diet Means Over Time 
 
 ```{r plotLines, echo=FALSE, eval=TRUE}
+theme_set(theme_gray(base_size = 24))
 ggplot(CW, aes(Time, weight, colour = Diet)) +
-  stat_summary(fun.y="mean", geom="line") + 
+  stat_summary(fun="mean", geom="line") + 
   xlab("Time (days)") + ylab("Weight (grams)") +
   theme(legend.position = "right") +
   scale_x_continuous(breaks=unique(ChickWeight$Time)) +
@@ -376,8 +374,9 @@ ggplot(CW, aes(Time, weight, colour = Diet)) +
 # Diet Means Over Time 
 
 ```{r plotFacet, echo=FALSE, eval=TRUE}
+theme_set(theme_gray(base_size = 16))
 ggplot(CW, aes(Time, weight, colour = Diet)) +
-  stat_summary(fun.y="mean", geom="line") + 
+  stat_summary(fun="mean", geom="line") + 
   geom_jitter(width = 0.15) +
   facet_wrap(~Diet) +
   xlab("Time (days)") + ylab("Weight (grams)") +
@@ -482,7 +481,7 @@ class: inverse, center, middle
 
 .pull-left[
 ```{r filterRows1, echo=2}
-options(datatable.print.nrows=8)
+options(datatable.print.nrows = 8)
 cw[Time==21]
 ```
 ]
